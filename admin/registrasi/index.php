@@ -32,8 +32,8 @@
             <div class="table-responsive">
               <form method="post" action="../function.php">
               <div class="form-group">
-                <label for="exampleFormControlSelect1" name="status_reg">Status Registrasi</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <label for="exampleFormControlSelect1">Status Registrasi</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="status_reg">
                     <?php
                     $status = ['Aktif', 'Tidak Aktif'];
                     foreach ($status as $value) {

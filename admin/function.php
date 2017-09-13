@@ -98,10 +98,11 @@
     }
 
     if (isset($_POST["updateRegistrasi"])) {
-       updateRegistrasi();
+        include_once '../koneksi.php';
+        updateRegistrasi($connect);
     }
 
-    function updateRegistrasi() {
+    function updateRegistrasi($connect) {
         $status_reg = $_POST['status_reg'];
         $tahun_ajar = $_POST['tahun_ajar'];
         $sql1 = "UPDATE config SET value = '$status_reg' WHERE config ='status_reg'";
@@ -111,9 +112,9 @@
         $query2 = mysqli_query($connect,$sql2);
 
         if ($query1 && $query2) {
-            echo"<script>window.location.href = 'registrasi';</script>";
+            echo"<script>alert('Registrasi berhasil di update!');window.location.href = 'registrasi';</script>";
         } else {
-            echo"<script>window.location.href = 'registrasi';</script>";
+            echo"<script>alert('Registrasi GAGAL di update!');window.location.href = 'registrasi';</script>";
         }
 
 
