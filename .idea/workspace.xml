@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5abbfd46-7b4d-4b59-9806-da0034bb56fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/function.php" afterPath="$PROJECT_DIR$/admin/function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/admin/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/registrasi/index.php" afterPath="$PROJECT_DIR$/admin/registrasi/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -238,7 +235,7 @@
       <updated>1505179122150</updated>
       <workItem from="1505179123434" duration="4777000" />
       <workItem from="1505303610626" duration="1853000" />
-      <workItem from="1505307190314" duration="9608000" />
+      <workItem from="1505307190314" duration="9620000" />
     </task>
     <task id="LOCAL-00001" summary="update function">
       <created>1505319788638</created>
@@ -247,11 +244,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505319788638</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update function">
+      <created>1505320727823</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1505320727823</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16238000" />
+    <option name="totallyTimeSpent" value="16250000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
