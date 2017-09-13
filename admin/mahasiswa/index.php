@@ -1,3 +1,7 @@
+<?php
+    require "../../koneksi.php";
+    include "../function.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,22 +36,9 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>111</td>
-                    <td>Adam Budi</td>
-                    <td>Informatika</td>
-                    <td>S1 Teknik Informatika</td>
-                    <td>IF-39-10</td>
-                    <td>2015</td>
-                  </tr>
-                  <tr>
-                    <td>222</td>
-                    <td>Rahayu</td>
-                    <td>Informatika</td>
-                    <td>S1 Teknik Informatika</td>
-                    <td>IF-38-02</td>
-                    <td>2014</td>
-                  </tr>
+                <?php
+                    getDataMahasiswa($connect);
+                ?>
                 </tbody>
               </table>
             </div>

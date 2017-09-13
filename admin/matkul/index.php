@@ -1,3 +1,7 @@
+<?php
+    require "../../koneksi.php";
+    include "../function.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,36 +34,9 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>DAP</td>
-                    <td>Dasar Algoritma dan Pemograman</td>
-                    <td>3</td>
-                    <td>Informatika</td>
-                  </tr>
-                  <tr>
-                    <td>STD</td>
-                    <td>Struktur Data</td>
-                    <td>3</td>
-                    <td>Informatika</td>
-                  </tr>
-                  <tr>
-                    <td>MPB</td>
-                    <td>Manajemen Pemasaran Bisnis</td>
-                    <td>2</td>
-                    <td>Manajemen</td>
-                  </tr>
-                  <tr>
-                    <td>NIR</td>
-                    <td>Nirmana</td>
-                    <td>4</td>
-                    <td>Industri Kreatif</td>
-                  </tr>
-                  <tr>
-                    <td>PBO</td>
-                    <td>Pemograman Berorientasi Objek</td>
-                    <td>3</td>
-                    <td>Informatika</td>
-                  </tr>
+                <?php
+                    getDataMatkul($connect);
+                ?>
                 </tbody>
               </table>
             </div>

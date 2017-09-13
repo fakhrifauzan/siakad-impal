@@ -1,3 +1,7 @@
+<?php
+    require "../../koneksi.php";
+    include "../function.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,18 +34,9 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>IF-39-10</td>
-                    <td>Informatika</td>
-                    <td>S1 Teknik Informatika</td>
-                    <td>AAA</td>
-                  </tr>
-                  <tr>
-                    <td>IF-38-02</td>
-                    <td>Manajemen</td>
-                    <td>S1 Manajemen</td>
-                    <td>ZZZ</td>
-                  </tr>
+                <?php
+                    getDataKelas($connect);
+                ?>
                 </tbody>
               </table>
             </div>

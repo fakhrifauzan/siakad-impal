@@ -1,3 +1,7 @@
+<?php
+    require "../../koneksi.php";
+    include "../function.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,15 +30,40 @@
             </div>
             <br>
             <div class="table-responsive">
-              <form>
+              <form method="post" action="../function.php">
               <div class="form-group">
-                <label for="exampleFormControlSelect1">Status Registrasi</label>
+                <label for="exampleFormControlSelect1" name="status_reg">Status Registrasi</label>
                 <select class="form-control" id="exampleFormControlSelect1">
-                  <option value="aktif">Aktif</option>
-                  <option value="tidakAktif">Tidak Aktif</option>
+                    <?php
+                    $status = ['Aktif', 'Tidak Aktif'];
+                    foreach ($status as $value) {
+                        echo "<option value='".$value."'";
+                        if (getStatusRegistrasi($connect) == $value) {
+                            echo "selected";
+                        }
+                        echo ">";
+                        echo $value."</option>";
+                    }
+                    ?>
                 </select>
               </div>
-              <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+              <div class="form-group">
+                  <label for="exampleFormControlSelect1">Tahun Ajaran</label>
+                  <select class="form-control" id="exampleFormControlSelect1" name="tahun_ajar">
+                      <?php
+                      $tahun = ['1516/1', '1516/2', '1617/1', '1617/2', '1718/1', '1718/2'];
+                      foreach ($tahun as $value) {
+                          echo "<option value='".$value."'";
+                          if (getTahunAjaran($connect) == $value) {
+                              echo "selected";
+                          }
+                          echo ">";
+                          echo $value."</option>";
+                      }
+                      ?>
+                  </select>
+              </div>
+              <button type="submit" class="btn btn-primary" name="updateRegistrasi">Submit</button>
             </form>
             </div>
           </div>

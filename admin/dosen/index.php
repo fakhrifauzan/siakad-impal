@@ -1,4 +1,7 @@
-
+<?php
+    require "../../koneksi.php";
+    include "../function.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,39 +35,8 @@
                 </thead>
                 <tbody>
                   <?php
-                    include '../function.php';
-                    getDataDosen;
+                    getDataDosen($connect);
                   ?>
-                  <!-- <tr>
-                    <td>AAA</td>
-                    <td>Alan Ardi A</td>
-                    <td>Informatika</td>
-                    <td>Tetap</td>
-                  </tr>
-                  <tr>
-                    <td>ABC</td>
-                    <td>Adi Budi Cantika</td>
-                    <td>Manajemen</td>
-                    <td>Tetap</td>
-                  </tr>
-                  <tr>
-                    <td>ARK</td>
-                    <td>Artur Rudi</td>
-                    <td>Manajemen</td>
-                    <td>Tetap</td>
-                  </tr>
-                  <tr>
-                    <td>REZ</td>
-                    <td>Reza Aditama</td>
-                    <td>Industri Kreatif</td>
-                    <td>Tetap</td>
-                  </tr>
-                  <tr>
-                    <td>ZZZ</td>
-                    <td>Zulaiha</td>
-                    <td>Informatika</td>
-                    <td>Tetap</td>
-                  </tr> -->
                 </tbody>
               </table>
             </div>
