@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2017 at 02:11 AM
+-- Generation Time: Sep 14, 2017 at 06:52 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -39,7 +39,7 @@ CREATE TABLE `config` (
 
 INSERT INTO `config` (`config`, `value`) VALUES
 ('status_reg', 'Aktif'),
-('tahun_ajar', '1516/2');
+('tahun_ajar', '1516/1');
 
 -- --------------------------------------------------------
 
@@ -70,6 +70,32 @@ INSERT INTO `dosen` (`kode_dosen`, `nama_dosen`, `fakultas`, `status`, `username
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `jadwal`
+--
+
+CREATE TABLE `jadwal` (
+  `id_jadwal` int(11) NOT NULL,
+  `kode_dosen` varchar(10) NOT NULL,
+  `kode_matkul` varchar(20) NOT NULL,
+  `kode_kelas` varchar(20) NOT NULL,
+  `hari` varchar(20) NOT NULL,
+  `jam` varchar(30) NOT NULL,
+  `ruangan` varchar(40) NOT NULL,
+  `semester` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jadwal`
+--
+
+INSERT INTO `jadwal` (`id_jadwal`, `kode_dosen`, `kode_matkul`, `kode_kelas`, `hari`, `jam`, `ruangan`, `semester`) VALUES
+(2, 'AAA', 'MPB', 'IF-39-10', 'Selasa', '09.30 - 12.30', 'E302', '1516/2'),
+(3, 'REZ', 'NIR', 'DS-39-04', 'Selasa', '12.30 - 15.30', 'B105', '1516/2'),
+(4, 'AAA', 'DAP', 'DS-39-04', 'Senin', '09.30 - 12.30', 'E301', '1617/2');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `kelas`
 --
 
@@ -85,6 +111,7 @@ CREATE TABLE `kelas` (
 --
 
 INSERT INTO `kelas` (`kode_kelas`, `fakultas`, `prodi`, `doswal`) VALUES
+('DS-39-04', 'Industri Kreatif', 'S1 Desain Komunikasi Visual', 'REZ'),
 ('IF-39-10', 'Informatika', 'S1 Teknik Informatika', 'AAA'),
 ('MB-40-09', 'Manajemen', 'S1 Manajemen', 'ZZZ');
 
@@ -95,7 +122,7 @@ INSERT INTO `kelas` (`kode_kelas`, `fakultas`, `prodi`, `doswal`) VALUES
 --
 
 CREATE TABLE `mahasiswa` (
-  `nim` int(11) NOT NULL,
+  `nim` varchar(20) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `fakultas` varchar(50) NOT NULL,
   `prodi` varchar(50) NOT NULL,
@@ -110,8 +137,8 @@ CREATE TABLE `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`nim`, `nama`, `fakultas`, `prodi`, `kelas`, `tahun_masuk`, `username`, `password`) VALUES
-(111, 'Adam Budi', 'Informatika', 'S1 Teknik Informatika', 'IF-39-10', '2015', '111', '111'),
-(222, 'Rahayu', 'Informatika', 'S1 Teknik Informatika', 'IF-39-10', '2014', '222', '222');
+('111', 'Adam Budi', 'Informatika', 'S1 Teknik Informatika', 'IF-39-10', '2015', '111', '111'),
+('222', 'Rahayu', 'Informatika', 'S1 Teknik Informatika', 'IF-39-10', '2014', '222', '222');
 
 -- --------------------------------------------------------
 
@@ -137,6 +164,30 @@ INSERT INTO `matkul` (`kode_matkul`, `nama_matkul`, `sks`, `fakultas`) VALUES
 ('PBO', 'Pemograman Berorientasi Objek', 3, 'Informatika'),
 ('STD', 'Struktur Data', 3, 'Informatika');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `registrasi`
+--
+
+CREATE TABLE `registrasi` (
+  `id_registrasi` int(11) NOT NULL,
+  `nim` varchar(20) NOT NULL,
+  `semester` varchar(10) NOT NULL,
+  `tagihan` int(11) NOT NULL,
+  `status` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `registrasi`
+--
+
+INSERT INTO `registrasi` (`id_registrasi`, `nim`, `semester`, `tagihan`, `status`) VALUES
+(1, '111', '1516/1', 4500000, 'Lunas'),
+(2, '222', '1516/1', 4500000, 'Belum Lunas'),
+(3, '111', '1516/2', 5000000, 'Belum Lunas'),
+(6, '222', '1617/2', 8500000, 'Lunas');
+
 --
 -- Indexes for dumped tables
 --
@@ -153,6 +204,12 @@ ALTER TABLE `config`
 ALTER TABLE `dosen`
   ADD PRIMARY KEY (`kode_dosen`),
   ADD UNIQUE KEY `username` (`username`);
+
+--
+-- Indexes for table `jadwal`
+--
+ALTER TABLE `jadwal`
+  ADD PRIMARY KEY (`id_jadwal`);
 
 --
 -- Indexes for table `kelas`
@@ -172,7 +229,27 @@ ALTER TABLE `mahasiswa`
 --
 ALTER TABLE `matkul`
   ADD PRIMARY KEY (`kode_matkul`);
-COMMIT;
+
+--
+-- Indexes for table `registrasi`
+--
+ALTER TABLE `registrasi`
+  ADD PRIMARY KEY (`id_registrasi`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `jadwal`
+--
+ALTER TABLE `jadwal`
+  MODIFY `id_jadwal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `registrasi`
+--
+ALTER TABLE `registrasi`
+  MODIFY `id_registrasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
