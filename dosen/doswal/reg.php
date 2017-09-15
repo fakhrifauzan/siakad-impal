@@ -2,6 +2,10 @@
 session_start();
 require "../../koneksi.php";
 include "../function.php";
+
+if (isset($_GET['nim'])) {
+    $nim = $_GET['nim'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +25,7 @@ include "../function.php";
         <div class="card mb-3">
           <div class="card-header">
             <i class="fa fa-pencil-square-o"></i>
-            Registrasi Mata Kuliah
+            Jadwal Perkuliahan <?php echo $nim?>
           </div>
           <div class="card-body">
             <form method="post" action="../function.php">
@@ -35,13 +39,11 @@ include "../function.php";
                     <th>Jam</th>
                     <th>Ruangan</th>
                       <th>SKS</th>
-                      <th>Aksi</th>
-
                   </tr>
                 </thead>
                 <tbody>
                 <?php
-                    getDataRegistrasiSmtIni($connect);
+                    getJadwalSementaraMhs($connect,$nim);
                 ?>
                 </tbody>
               </table>
@@ -51,17 +53,18 @@ include "../function.php";
                 <?php
                 include_once '../../admin/function.php';
 
-                if (cekSiapAcc($connect) == 'simpan' AND getStatusRegistrasi($connect) == 'Aktif') {
-                    echo '<button type="submit" class="btn btn-dark col-md-6" name="simpan">Simpan</button>';
-                    echo '<button type="submit" class="btn btn-warning col-md-6" name="siapAcc">Siap ACC</button>';
-                } else if (cekSiapAcc($connect) == 'ok') {
-                    echo '<a href="../jadwal"><p class="btn btn-primary btn-block">Registrasi telah di ACC Dosen Wali</p></a>';
+                if (cekSiapAccMhs($connect,$nim) == 'siap' AND getStatusRegistrasi($connect) == 'Aktif') {
+                    echo '<input type="number" name="nim" value='.$nim.' hidden>';
+                    echo '<button type="submit" class="btn btn-danger col-md-6" name="batal">Batalkan</button>';
+                    echo '<button type="submit" class="btn btn-primary col-md-6" name="okeAcc">ACC Registrasi</button>';
+                } else if (cekSiapAccMhs($connect,$nim) == 'simpan' AND getStatusRegistrasi($connect) == 'Aktif') {
+                    echo '<p class="btn btn-warning btn-block">Mahasiswa Belum Siap ACC</p>';
                 } else {
-                    echo '<p class="btn btn-danger btn-block">Menunggu Proses ACC Dosen Wali</p>';
+                    echo '<p class="btn btn-info btn-block">Sudah Anda ACC</p>';
                 }
                 ?>
             </div>
-
+            </form>
         </div>
 
       </div>

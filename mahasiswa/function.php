@@ -91,6 +91,9 @@
                         <td>".$value['ruangan']."</td>
                         <td>".$value['sks']."</td>
                         <td><input type='checkbox' class='form-control' name='jadwal[]' value='".$value['id_jadwal']."'";
+                    if (cekSiapAcc($connect) != 'simpan') {
+                        echo "disabled ";
+                    }
                     foreach ($pilihan as $pilih) {
                         if ($pilih['id_jadwal'] == $value['id_jadwal']) {
                             echo "checked";
@@ -119,8 +122,7 @@
 
     if (isset($_POST["siapAcc"])) {
         include_once '../koneksi.php';
-        siapAcc($connect);
-        echo"<script>alert('Saya siap ACC!');window.location.href = 'registrasi/index.php';</script>";
+        setSiapAcc($connect);
     }
 
     function simpanKrs($connect) {
@@ -136,7 +138,7 @@
         $cari = mysqli_query($connect, $check);
         if (mysqli_num_rows($cari) >= 1) {
             $lala = mysqli_fetch_array($cari);
-            $id = $lala['id'];
+            $id = $lala['id_reg_matkul'];
 
             $sql = "DELETE FROM reg_matkul_detail WHERE id_reg_matkul='$id'";
             $delete = mysqli_query($connect, $sql);
@@ -169,8 +171,80 @@
         }
     }
 
-    function siapAcc($connect) {
+    function getJadwalSementara($connect) {
+        include_once "../../admin/function.php";
 
+        $nim = $_SESSION['nim'];
+
+        $status_reg = getStatusRegistrasi($connect);
+        $tahun_ajaran = getTahunAjaran($connect);
+
+        if ($status_reg == 'Tidak Aktif') {
+            echo "<tr><td colspan='8'>Maaf, Waktu Registrasi belum Dimulai!</td></tr>";
+        } else {
+            $sql = "SELECT * FROM jadwal JOIN matkul USING (kode_matkul) JOIN reg_matkul_detail USING (id_jadwal) JOIN reg_matkul USING (id_reg_matkul) WHERE reg_matkul.semester='$tahun_ajaran' AND nim='$nim' AND status='simpan' OR status='siap'";
+            $jadwalSementara = mysqli_query($connect, $sql);
+
+            if(mysqli_num_rows($jadwalSementara) == 0){
+                //echo '<tr><td colspan="4"><center>Data Tidak Tersedia</center></td></tr>';
+            } else {
+                foreach ($jadwalSementara as $value) {
+                    echo "
+                    <tr>
+                        <td>".$value['nama_matkul']."</td>
+                        <td>".$value['kode_kelas']."</td>
+                        <td>".$value['hari']."</td>
+                        <td>".$value['jam']."</td>
+                        <td>".$value['ruangan']."</td>
+                        <td>".$value['sks']."</td>
+                    </tr>";
+                }
+            }
+        }
+    }
+
+    function getJadwalMhs($connect) {
+        include_once "../../admin/function.php";
+
+        $nim = $_SESSION['nim'];
+
+        $status_reg = getStatusRegistrasi($connect);
+        $tahun_ajaran = getTahunAjaran($connect);
+
+        $sql = "SELECT * FROM jadwal JOIN matkul USING (kode_matkul) JOIN reg_matkul_detail USING (id_jadwal) JOIN reg_matkul USING (id_reg_matkul) WHERE reg_matkul.semester='$tahun_ajaran' AND nim='$nim' AND status='ok'";
+        $jadwalFix = mysqli_query($connect, $sql);
+
+        if(mysqli_num_rows($jadwalFix) == 0){
+            //echo '<tr><td colspan="4"><center>Data Tidak Tersedia</center></td></tr>';
+        } else {
+            foreach ($jadwalFix as $value) {
+                echo "
+                        <tr>
+                            <td>".$value['nama_matkul']."</td>
+                            <td>".$value['kode_kelas']."</td>
+                            <td>".$value['hari']."</td>
+                            <td>".$value['jam']."</td>
+                            <td>".$value['ruangan']."</td>
+                            <td>".$value['sks']."</td>
+                        </tr>";
+            }
+        }
+}
+
+    function setSiapAcc($connect) {
+        session_start();
+        $nim = $_SESSION['nim'];
+
+        include_once "../admin/function.php";
+        $semester = getTahunAjaran($connect);
+
+        $sql = "UPDATE reg_matkul SET status = 'siap' WHERE nim='$nim' AND semester='$semester'";
+        $query = mysqli_query($connect, $sql);
+        if ($query) {
+            echo '<script>alert("Siap ACC!");window.location.href=\'registrasi\';</script>';
+        } else {
+            echo '<script>alert("Data Gagal disimpan");window.location.href=\'registrasi\';</script>';
+        }
     }
 
 ?>

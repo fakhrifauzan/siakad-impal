@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5abbfd46-7b4d-4b59-9806-da0034bb56fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mahasiswa/registrasi/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dosen/doswal/detail.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dosen/doswal/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dosen/doswal/reg.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mahasiswa/jadwal/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mahasiswa/jadwal/sementara.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/admin/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/nav.php" afterPath="$PROJECT_DIR$/admin/nav.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dosen/function.php" afterPath="$PROJECT_DIR$/dosen/function.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dosen/index.php" afterPath="$PROJECT_DIR$/dosen/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dosen/nav.php" afterPath="$PROJECT_DIR$/dosen/nav.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/function.php" afterPath="$PROJECT_DIR$/function.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mahasiswa/function.php" afterPath="$PROJECT_DIR$/mahasiswa/function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mahasiswa/index.php" afterPath="$PROJECT_DIR$/mahasiswa/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mahasiswa/nav.php" afterPath="$PROJECT_DIR$/mahasiswa/nav.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mahasiswa/registrasi/index.php" afterPath="$PROJECT_DIR$/mahasiswa/registrasi/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,40 +23,113 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="function.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mahasiswa/function.php">
+      <file leaf-file-name="function.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dosen/function.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+            <state relative-caret-position="375">
+              <caret line="133" column="96" lean-forward="false" selection-start-line="133" selection-start-column="96" selection-end-line="133" selection-end-column="96" />
               <folding>
-                <marker date="1505470152102" expanded="true" signature="194:235" ph="SELECT * FRO... registrasi" />
-                <marker date="1505470152102" expanded="true" signature="539:771" ph="..." />
-                <marker date="1505470152102" expanded="true" signature="855:1112" ph="..." />
-                <marker date="1505470152102" expanded="true" signature="947:1082" ph="..." />
-                <marker date="1505470152102" expanded="true" signature="1170:1432" ph="..." />
-                <marker date="1505470152102" expanded="true" signature="1258:1402" ph="..." />
-                <marker date="1505470152102" expanded="true" signature="2210:2320" ph="INSERT INTO bukti_pembayaran... " />
-                <marker date="1505470152102" expanded="true" signature="2816:2924" ph="SELECT * FRO... jadwal" />
-                <marker date="1505470152102" expanded="true" signature="3001:3124" ph="SELECT id_ja... reg_matkul" />
-                <marker date="1505470152102" expanded="true" signature="3439:4142" ph="..." />
-                <marker date="1505470152102" expanded="true" signature="3794:4137" ph="..." />
-                <marker date="1505470152102" expanded="true" signature="4281:4324" ph="SELECT * FRO... reg_matkul" />
-                <marker date="1505470152102" expanded="true" signature="5037:5103" ph="SELECT * FRO... reg_matkul" />
-                <marker date="1505470152102" expanded="true" signature="5296:5351" ph="DELETE FROM " />
-                <marker date="1505470152102" expanded="true" signature="5481:5562" ph="INSERT INTO reg_matkul_detail... " />
-                <marker date="1505470152102" expanded="true" signature="5964:6030" ph="INSERT INTO reg_matkul... " />
-                <marker date="1505470152102" expanded="true" signature="6252:6344" ph="INSERT INTO reg_matkul_detail... " />
+                <marker date="1505479828848" expanded="true" signature="228:279" ph="SELECT * FRO... jadwal" />
+                <marker date="1505479828848" expanded="true" signature="567:982" ph="..." />
+                <marker date="1505479828848" expanded="true" signature="1172:1218" ph="SELECT * FRO... kelas" />
+                <marker date="1505479828848" expanded="true" signature="1503:1908" ph="..." />
+                <marker date="1505479828848" expanded="true" signature="1744:1877" ph="..." />
+                <marker date="1505479828848" expanded="true" signature="1878:1882" ph="..." />
+                <marker date="1505479828848" expanded="true" signature="1878:1908" ph="..." />
+                <marker date="1505479828848" expanded="true" signature="2035:2078" ph="SELECT * FRO... mahasiswa" />
+                <marker date="1505479828848" expanded="true" signature="2379:2967" ph="..." />
+                <marker date="1505479828848" expanded="true" signature="2760:2937" ph="..." />
+                <marker date="1505479828848" expanded="true" signature="2794:2932" ph="..." />
+                <marker date="1505479828848" expanded="true" signature="3403:3591" ph="SELECT * FRO... jadwal" />
+                <marker date="1505479828848" expanded="true" signature="3936:4316" ph="..." />
+                <marker date="1505479828848" expanded="true" signature="4429:4472" ph="SELECT * FRO... reg_matkul" />
+                <marker date="1505479828848" expanded="true" signature="4928:5005" ph="UPDATE reg_m... " />
+                <marker date="1505479828848" expanded="true" signature="5662:5743" ph="UPDATE reg_m... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mahasiswa/registrasi/index.php">
+        <entry file="file://$PROJECT_DIR$/admin/registrasi/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+            <state relative-caret-position="425">
+              <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="30" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mahasiswa/function.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="219" column="37" lean-forward="false" selection-start-line="219" selection-start-column="37" selection-end-line="219" selection-end-column="37" />
+              <folding>
+                <marker date="1505481227937" expanded="true" signature="194:235" ph="SELECT * FRO... registrasi" />
+                <marker date="1505481227937" expanded="true" signature="539:771" ph="..." />
+                <marker date="1505481227937" expanded="true" signature="855:1112" ph="..." />
+                <marker date="1505481227937" expanded="true" signature="947:1082" ph="..." />
+                <marker date="1505481227937" expanded="true" signature="1170:1432" ph="..." />
+                <marker date="1505481227937" expanded="true" signature="1258:1402" ph="..." />
+                <marker date="1505481227937" expanded="true" signature="2210:2320" ph="INSERT INTO bukti_pembayaran... " />
+                <marker date="1505481227937" expanded="true" signature="2816:2924" ph="SELECT * FRO... jadwal" />
+                <marker date="1505481227937" expanded="true" signature="3001:3124" ph="SELECT id_ja... reg_matkul" />
+                <marker date="1505481227937" expanded="true" signature="3439:3765" ph="..." />
+                <marker date="1505481227937" expanded="true" signature="3439:3862" ph="..." />
+                <marker date="1505481227937" expanded="true" signature="3439:4266" ph="..." />
+                <marker date="1505481227937" expanded="true" signature="4229:4261" ph="..." />
+                <marker date="1505481227937" expanded="true" signature="4405:4448" ph="SELECT * FRO... reg_matkul" />
+                <marker date="1505481227937" expanded="true" signature="5061:5127" ph="SELECT * FRO... reg_matkul" />
+                <marker date="1505481227937" expanded="true" signature="5331:5386" ph="DELETE FROM " />
+                <marker date="1505481227937" expanded="true" signature="5516:5597" ph="INSERT INTO reg_matkul_detail... " />
+                <marker date="1505481227937" expanded="true" signature="5999:6065" ph="INSERT INTO reg_matkul... " />
+                <marker date="1505481227937" expanded="true" signature="6287:6379" ph="INSERT INTO reg_matkul_detail... " />
+                <marker date="1505481227937" expanded="true" signature="7157:7345" ph="SELECT * FRO... jadwal" />
+                <marker date="1505481227937" expanded="true" signature="7157:7365" ph="SELECT * FRO... jadwal" />
+                <marker date="1505481227937" expanded="true" signature="7157:7382" ph="SELECT * FRO... jadwal" />
+                <marker date="1505481227937" expanded="true" signature="7722:8070" ph="..." />
+                <marker date="1505481227937" expanded="true" signature="7722:8074" ph="..." />
+                <marker date="1505481227937" expanded="true" signature="8369:8573" ph="SELECT * FRO... jadwal" />
+                <marker date="1505481227937" expanded="true" signature="8875:9255" ph="..." />
+                <marker date="1505481227937" expanded="true" signature="9490:9544" ph="UPDATE reg_m... " />
+                <marker date="1505481227937" expanded="true" signature="9490:9569" ph="UPDATE reg_m... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mahasiswa/jadwal/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+              <folding>
+                <marker date="1505480950226" expanded="true" signature="705:865" ph="..." />
+                <marker date="1505480950226" expanded="true" signature="782:844" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dosen/doswal/detail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="7" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bukti.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/registrasi/bukti.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
+              <folding>
+                <marker date="1505443107854" expanded="true" signature="275:381" ph="SELECT * FRO... bukti_pembayaran" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,11 +151,12 @@
       <find>tagihan</find>
       <find>blank</find>
       <find>\&quot;</find>
-      <find>tagiha</find>
       <find>cekdosen</find>
       <find>jadwal</find>
       <find>delete</find>
       <find>fitur</find>
+      <find>siap acc</find>
+      <find>tagiha</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -108,7 +183,6 @@
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/cek.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/dosen/function.php" />
         <option value="$PROJECT_DIR$/dosen/head.php" />
         <option value="$PROJECT_DIR$/dosen/jadwal/index.php" />
         <option value="$PROJECT_DIR$/mahasiswa/head.php" />
@@ -121,16 +195,22 @@
         <option value="$PROJECT_DIR$/paycheck/registrasi/bukti.php" />
         <option value="$PROJECT_DIR$/paycheck/function.php" />
         <option value="$PROJECT_DIR$/admin/registrasi/bukti.php" />
-        <option value="$PROJECT_DIR$/admin/function.php" />
         <option value="$PROJECT_DIR$/function.php" />
         <option value="$PROJECT_DIR$/admin/nav.php" />
-        <option value="$PROJECT_DIR$/dosen/nav.php" />
         <option value="$PROJECT_DIR$/mahasiswa/nav.php" />
-        <option value="$PROJECT_DIR$/dosen/index.php" />
         <option value="$PROJECT_DIR$/mahasiswa/index.php" />
         <option value="$PROJECT_DIR$/admin/index.php" />
-        <option value="$PROJECT_DIR$/mahasiswa/function.php" />
+        <option value="$PROJECT_DIR$/mahasiswa/jadwal/sementara.php" />
+        <option value="$PROJECT_DIR$/dosen/index.php" />
+        <option value="$PROJECT_DIR$/dosen/doswal/index.php" />
+        <option value="$PROJECT_DIR$/admin/function.php" />
+        <option value="$PROJECT_DIR$/dosen/nav.php" />
+        <option value="$PROJECT_DIR$/dosen/doswal/detail.php" />
+        <option value="$PROJECT_DIR$/dosen/function.php" />
+        <option value="$PROJECT_DIR$/dosen/doswal/reg.php" />
         <option value="$PROJECT_DIR$/mahasiswa/registrasi/index.php" />
+        <option value="$PROJECT_DIR$/mahasiswa/jadwal/index.php" />
+        <option value="$PROJECT_DIR$/mahasiswa/function.php" />
       </list>
     </option>
   </component>
@@ -180,27 +260,6 @@
               <item name="yeyeyeye" type="b2602c69:ProjectViewProjectNode" />
               <item name="yeyeyeye" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="yeyeyeye" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yeyeyeye" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="yeyeyeye" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yeyeyeye" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="dosen" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="yeyeyeye" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yeyeyeye" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mahasiswa" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="yeyeyeye" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yeyeyeye" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mahasiswa" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="registrasi" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -219,11 +278,11 @@
       <recent name="C:\xampp\htdocs\lalalala\assets" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\yeyeyeye\mahasiswa\jadwal" />
+      <recent name="C:\xampp\htdocs\yeyeyeye\dosen\doswal" />
       <recent name="C:\xampp\htdocs\yeyeyeye\mahasiswa\registrasi" />
       <recent name="C:\xampp\htdocs\yeyeyeye\admin\registrasi" />
       <recent name="C:\xampp\htdocs\yeyeyeye\paycheck\registrasi" />
-      <recent name="C:\xampp\htdocs\yeyeyeye\paycheck" />
-      <recent name="C:\xampp\htdocs\yeyeyeye\mahasiswa" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -266,7 +325,7 @@
       <workItem from="1505307190314" duration="9674000" />
       <workItem from="1505347905091" duration="63000" />
       <workItem from="1505354154687" duration="9887000" />
-      <workItem from="1505398561114" duration="33033000" />
+      <workItem from="1505398561114" duration="43277000" />
     </task>
     <task id="LOCAL-00001" summary="update function">
       <created>1505319788638</created>
@@ -310,11 +369,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505443760293</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update jumat sore 17.15">
+      <created>1505470550954</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1505470550954</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59287000" />
+    <option name="totallyTimeSpent" value="69531000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -352,149 +418,14 @@
     <MESSAGE value="updateDB" />
     <MESSAGE value="update Function" />
     <MESSAGE value="update 3 PSPEC" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 3 PSPEC" />
+    <MESSAGE value="update jumat sore 17.15" />
+    <option name="LAST_COMMIT_MESSAGE" value="update jumat sore 17.15" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-          <folding>
-            <marker date="1505443668942" expanded="true" signature="158:177" ph="SELECT * FRO... dosen" />
-            <marker date="1505443668942" expanded="true" signature="458:690" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="796:815" ph="SELECT * FRO... dosen" />
-            <marker date="1505443668942" expanded="true" signature="1137:1244" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="1354:1373" ph="SELECT * FRO... kelas" />
-            <marker date="1505443668942" expanded="true" signature="1654:1688" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="1654:1881" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="1987:2006" ph="SELECT * FRO... kelas" />
-            <marker date="1505443668942" expanded="true" signature="2537:2551" ph="SELECT * FRO... matkul" />
-            <marker date="1505443668942" expanded="true" signature="2537:2560" ph="SELECT * FRO... mahasiswa" />
-            <marker date="1505443668942" expanded="true" signature="2857:2895" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="2857:3207" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="3321:3344" ph="SELECT * FRO... mahasiswa" />
-            <marker date="1505443668942" expanded="true" signature="3892:3912" ph="SELECT * FRO... matkul" />
-            <marker date="1505443668942" expanded="true" signature="4196:4230" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="4196:4427" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="4534:4548" ph="SELECT * FRO... dosen" />
-            <marker date="1505443668942" expanded="true" signature="4534:4554" ph="SELECT * FRO... matkul" />
-            <marker date="1505443668942" expanded="true" signature="5077:5125" ph="SELECT * FRO... config" />
-            <marker date="1505443668942" expanded="true" signature="5326:5374" ph="SELECT * FRO... config" />
-            <marker date="1505443668942" expanded="true" signature="5783:5849" ph="UPDATE confi... " />
-            <marker date="1505443668942" expanded="true" signature="5789:5797" ph="SELECT * FRO... config" />
-            <marker date="1505443668942" expanded="true" signature="5869:5935" ph="UPDATE confi... " />
-            <marker date="1505443668942" expanded="true" signature="6383:6407" ph="SELECT * FRO... registrasi" />
-            <marker date="1505443668942" expanded="true" signature="6707:6745" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="6707:6923" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="6707:8073" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7007:7490" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7090:7233" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7325:7460" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7548:8022" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7631:7774" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7866:7992" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="8620:8668" ph="DELETE FROM " />
-            <marker date="1505443668942" expanded="true" signature="9093:9173" ph="INSERT INTO registrasi... " />
-            <marker date="1505443668942" expanded="true" signature="9567:9635" ph="SELECT * FRO... registrasi" />
-            <marker date="1505443668942" expanded="true" signature="9850:9870" ph="SELECT * FRO... jadwal" />
-            <marker date="1505443668942" expanded="true" signature="10158:11058" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="10576:11032" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="10664:10789" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="10876:11002" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="11723:11843" ph="INSERT INTO jadwal... " />
-            <marker date="1505443668942" expanded="true" signature="12367:12453" ph="SELECT * FRO... jadwal" />
-            <marker date="1505443668942" expanded="true" signature="12367:12480" ph="SELECT * FRO... jadwal" />
-            <marker date="1505443668942" expanded="true" signature="12735:12815" ph="SELECT * FRO... jadwal" />
-            <marker date="1505443668942" expanded="true" signature="12735:12842" ph="SELECT * FRO... jadwal" />
-            <marker date="1505443668942" expanded="true" signature="13314:13354" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/registrasi/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3774">
-          <caret line="222" column="12" lean-forward="true" selection-start-line="222" selection-start-column="12" selection-end-line="222" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yeyeyeye.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-          <folding>
-            <marker date="1505443668942" expanded="true" signature="158:177" ph="SELECT * FRO... dosen" />
-            <marker date="1505443668942" expanded="true" signature="458:690" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="796:815" ph="SELECT * FRO... dosen" />
-            <marker date="1505443668942" expanded="true" signature="1137:1244" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="1354:1373" ph="SELECT * FRO... kelas" />
-            <marker date="1505443668942" expanded="true" signature="1654:1688" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="1654:1881" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="1987:2006" ph="SELECT * FRO... kelas" />
-            <marker date="1505443668942" expanded="true" signature="2537:2551" ph="SELECT * FRO... matkul" />
-            <marker date="1505443668942" expanded="true" signature="2537:2560" ph="SELECT * FRO... mahasiswa" />
-            <marker date="1505443668942" expanded="true" signature="2857:2895" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="2857:3207" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="3321:3344" ph="SELECT * FRO... mahasiswa" />
-            <marker date="1505443668942" expanded="true" signature="3892:3912" ph="SELECT * FRO... matkul" />
-            <marker date="1505443668942" expanded="true" signature="4196:4230" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="4196:4427" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="4534:4548" ph="SELECT * FRO... dosen" />
-            <marker date="1505443668942" expanded="true" signature="4534:4554" ph="SELECT * FRO... matkul" />
-            <marker date="1505443668942" expanded="true" signature="5077:5125" ph="SELECT * FRO... config" />
-            <marker date="1505443668942" expanded="true" signature="5326:5374" ph="SELECT * FRO... config" />
-            <marker date="1505443668942" expanded="true" signature="5783:5849" ph="UPDATE confi... " />
-            <marker date="1505443668942" expanded="true" signature="5789:5797" ph="SELECT * FRO... config" />
-            <marker date="1505443668942" expanded="true" signature="5869:5935" ph="UPDATE confi... " />
-            <marker date="1505443668942" expanded="true" signature="6383:6407" ph="SELECT * FRO... registrasi" />
-            <marker date="1505443668942" expanded="true" signature="6707:6745" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="6707:6923" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="6707:8073" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7007:7490" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7090:7233" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7325:7460" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7548:8022" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7631:7774" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7866:7992" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="8620:8668" ph="DELETE FROM " />
-            <marker date="1505443668942" expanded="true" signature="9093:9173" ph="INSERT INTO registrasi... " />
-            <marker date="1505443668942" expanded="true" signature="9567:9635" ph="SELECT * FRO... registrasi" />
-            <marker date="1505443668942" expanded="true" signature="9850:9870" ph="SELECT * FRO... jadwal" />
-            <marker date="1505443668942" expanded="true" signature="10158:11058" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="10576:11032" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="10664:10789" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="10876:11002" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="11723:11843" ph="INSERT INTO jadwal... " />
-            <marker date="1505443668942" expanded="true" signature="12367:12453" ph="SELECT * FRO... jadwal" />
-            <marker date="1505443668942" expanded="true" signature="12367:12480" ph="SELECT * FRO... jadwal" />
-            <marker date="1505443668942" expanded="true" signature="12735:12815" ph="SELECT * FRO... jadwal" />
-            <marker date="1505443668942" expanded="true" signature="12735:12842" ph="SELECT * FRO... jadwal" />
-            <marker date="1505443668942" expanded="true" signature="13314:13354" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/registrasi/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -575,14 +506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/registrasi/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-356">
-          <caret line="65" column="14" lean-forward="false" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cek.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -623,25 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dosen/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <marker date="1505404712853" expanded="true" signature="228:279" ph="SELECT * FRO... jadwal" />
-            <marker date="1505404712853" expanded="true" signature="567:982" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dosen/jadwal/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="32" lean-forward="true" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blank.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -666,16 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mahasiswa/registrasi/tagihan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/paycheck/head.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -689,16 +583,6 @@
         <state relative-caret-position="323">
           <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/registrasi/bukti.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="70" column="6" lean-forward="false" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
-          <folding>
-            <marker date="1505443107854" expanded="true" signature="275:381" ph="SELECT * FRO... bukti_pembayaran" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -737,19 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="45" column="57" lean-forward="false" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
-          <folding>
-            <marker date="1505448774007" expanded="true" signature="1094:1169" ph="SELECT * FRO... mahasiswa" />
-            <marker date="1505448774007" expanded="true" signature="1683:1754" ph="SELECT * FRO... dosen" />
-            <marker date="1505448774007" expanded="true" signature="2241:2315" ph="SELECT * FRO... paycheck" />
-            <marker date="1505448774007" expanded="true" signature="2677:2748" ph="SELECT * FRO... admin" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mahasiswa/registrasi/upload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="545">
@@ -768,26 +639,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dosen/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="191" column="12" lean-forward="true" selection-start-line="191" selection-start-column="12" selection-end-line="191" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="127" column="25" lean-forward="false" selection-start-line="127" selection-start-column="25" selection-end-line="127" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dosen/nav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="24" column="43" lean-forward="false" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -824,92 +679,244 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mahasiswa/jadwal/sementara.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dosen/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="51" column="14" lean-forward="false" selection-start-line="51" selection-start-column="14" selection-end-line="57" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="45" column="57" lean-forward="false" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
+          <folding>
+            <marker date="1505448774007" expanded="true" signature="1094:1169" ph="SELECT * FRO... mahasiswa" />
+            <marker date="1505448774007" expanded="true" signature="1683:1754" ph="SELECT * FRO... dosen" />
+            <marker date="1505448774007" expanded="true" signature="2241:2315" ph="SELECT * FRO... paycheck" />
+            <marker date="1505448774007" expanded="true" signature="2677:2748" ph="SELECT * FRO... admin" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mahasiswa/registrasi/tagihan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/registrasi/bukti.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <marker date="1505443107854" expanded="true" signature="275:381" ph="SELECT * FRO... bukti_pembayaran" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dosen/jadwal/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="32" lean-forward="true" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dosen/nav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dosen/doswal/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="35" lean-forward="true" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dosen/doswal/detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="7" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/function.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="155" column="13" lean-forward="false" selection-start-line="155" selection-start-column="13" selection-end-line="155" selection-end-column="13" />
+        <state relative-caret-position="-1148">
+          <caret line="225" column="0" lean-forward="true" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
           <folding>
-            <marker date="1505443668942" expanded="true" signature="158:177" ph="SELECT * FRO... dosen" />
-            <marker date="1505443668942" expanded="true" signature="458:690" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="796:815" ph="SELECT * FRO... dosen" />
-            <marker date="1505443668942" expanded="true" signature="1137:1244" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="1354:1373" ph="SELECT * FRO... kelas" />
-            <marker date="1505443668942" expanded="true" signature="1654:1688" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="1654:1881" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="1987:2006" ph="SELECT * FRO... kelas" />
-            <marker date="1505443668942" expanded="true" signature="2537:2551" ph="SELECT * FRO... matkul" />
-            <marker date="1505443668942" expanded="true" signature="2537:2560" ph="SELECT * FRO... mahasiswa" />
-            <marker date="1505443668942" expanded="true" signature="2857:2895" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="2857:3207" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="3321:3344" ph="SELECT * FRO... mahasiswa" />
-            <marker date="1505443668942" expanded="true" signature="3892:3912" ph="SELECT * FRO... matkul" />
-            <marker date="1505443668942" expanded="true" signature="4196:4230" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="4196:4427" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="4534:4548" ph="SELECT * FRO... dosen" />
-            <marker date="1505443668942" expanded="true" signature="4534:4554" ph="SELECT * FRO... matkul" />
-            <marker date="1505443668942" expanded="true" signature="5077:5125" ph="SELECT * FRO... config" />
-            <marker date="1505443668942" expanded="true" signature="5326:5374" ph="SELECT * FRO... config" />
-            <marker date="1505443668942" expanded="true" signature="5783:5849" ph="UPDATE confi... " />
-            <marker date="1505443668942" expanded="true" signature="5789:5797" ph="SELECT * FRO... config" />
-            <marker date="1505443668942" expanded="true" signature="5869:5935" ph="UPDATE confi... " />
-            <marker date="1505443668942" expanded="true" signature="6383:6407" ph="SELECT * FRO... registrasi" />
-            <marker date="1505443668942" expanded="true" signature="6707:6745" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="6707:6923" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="6707:8073" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7007:7490" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7090:7233" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7325:7460" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7548:8022" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7631:7774" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="7866:7992" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="8620:8668" ph="DELETE FROM " />
-            <marker date="1505443668942" expanded="true" signature="9093:9173" ph="INSERT INTO registrasi... " />
-            <marker date="1505443668942" expanded="true" signature="9567:9635" ph="SELECT * FRO... registrasi" />
-            <marker date="1505443668942" expanded="true" signature="9850:9870" ph="SELECT * FRO... jadwal" />
-            <marker date="1505443668942" expanded="true" signature="10158:11058" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="10576:11032" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="10664:10789" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="10876:11002" ph="..." />
-            <marker date="1505443668942" expanded="true" signature="11723:11843" ph="INSERT INTO jadwal... " />
-            <marker date="1505443668942" expanded="true" signature="12367:12453" ph="SELECT * FRO... jadwal" />
-            <marker date="1505443668942" expanded="true" signature="12367:12480" ph="SELECT * FRO... jadwal" />
-            <marker date="1505443668942" expanded="true" signature="12735:12815" ph="SELECT * FRO... jadwal" />
-            <marker date="1505443668942" expanded="true" signature="12735:12842" ph="SELECT * FRO... jadwal" />
-            <marker date="1505443668942" expanded="true" signature="13314:13354" ph="DELETE FROM " />
+            <marker date="1505477233673" expanded="true" signature="158:177" ph="SELECT * FRO... dosen" />
+            <marker date="1505477233673" expanded="true" signature="458:690" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="643:668" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="796:815" ph="SELECT * FRO... dosen" />
+            <marker date="1505477233673" expanded="true" signature="1137:1244" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="1354:1373" ph="SELECT * FRO... kelas" />
+            <marker date="1505477233673" expanded="true" signature="1654:1688" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="1654:1881" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="1987:2006" ph="SELECT * FRO... kelas" />
+            <marker date="1505477233673" expanded="true" signature="2537:2551" ph="SELECT * FRO... matkul" />
+            <marker date="1505477233673" expanded="true" signature="2537:2560" ph="SELECT * FRO... mahasiswa" />
+            <marker date="1505477233673" expanded="true" signature="2857:2895" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="2857:3207" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="3321:3344" ph="SELECT * FRO... mahasiswa" />
+            <marker date="1505477233673" expanded="true" signature="3892:3912" ph="SELECT * FRO... matkul" />
+            <marker date="1505477233673" expanded="true" signature="4196:4230" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="4196:4427" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="4534:4548" ph="SELECT * FRO... dosen" />
+            <marker date="1505477233673" expanded="true" signature="4534:4554" ph="SELECT * FRO... matkul" />
+            <marker date="1505477233673" expanded="true" signature="5077:5125" ph="SELECT * FRO... config" />
+            <marker date="1505477233673" expanded="true" signature="5326:5374" ph="SELECT * FRO... config" />
+            <marker date="1505477233673" expanded="true" signature="5783:5849" ph="UPDATE confi... " />
+            <marker date="1505477233673" expanded="true" signature="5789:5797" ph="SELECT * FRO... config" />
+            <marker date="1505477233673" expanded="true" signature="5869:5935" ph="UPDATE confi... " />
+            <marker date="1505477233673" expanded="true" signature="6383:6407" ph="SELECT * FRO... registrasi" />
+            <marker date="1505477233673" expanded="true" signature="6707:6745" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="6707:6923" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="6707:8073" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="7007:7490" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="7090:7233" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="7325:7460" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="7548:8022" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="7631:7774" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="7866:7992" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="8620:8668" ph="DELETE FROM " />
+            <marker date="1505477233673" expanded="true" signature="9093:9173" ph="INSERT INTO registrasi... " />
+            <marker date="1505477233673" expanded="true" signature="9567:9635" ph="SELECT * FRO... registrasi" />
+            <marker date="1505477233673" expanded="true" signature="9850:9870" ph="SELECT * FRO... jadwal" />
+            <marker date="1505477233673" expanded="true" signature="10158:11058" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="10576:11032" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="10664:10789" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="10876:11002" ph="..." />
+            <marker date="1505477233673" expanded="true" signature="11723:11843" ph="INSERT INTO jadwal... " />
+            <marker date="1505477233673" expanded="true" signature="12367:12453" ph="SELECT * FRO... jadwal" />
+            <marker date="1505477233673" expanded="true" signature="12367:12480" ph="SELECT * FRO... jadwal" />
+            <marker date="1505477233673" expanded="true" signature="12735:12815" ph="SELECT * FRO... jadwal" />
+            <marker date="1505477233673" expanded="true" signature="12735:12842" ph="SELECT * FRO... jadwal" />
+            <marker date="1505477233673" expanded="true" signature="13314:13354" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dosen/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="133" column="96" lean-forward="false" selection-start-line="133" selection-start-column="96" selection-end-line="133" selection-end-column="96" />
+          <folding>
+            <marker date="1505479828848" expanded="true" signature="228:279" ph="SELECT * FRO... jadwal" />
+            <marker date="1505479828848" expanded="true" signature="567:982" ph="..." />
+            <marker date="1505479828848" expanded="true" signature="1172:1218" ph="SELECT * FRO... kelas" />
+            <marker date="1505479828848" expanded="true" signature="1503:1908" ph="..." />
+            <marker date="1505479828848" expanded="true" signature="1744:1877" ph="..." />
+            <marker date="1505479828848" expanded="true" signature="1878:1882" ph="..." />
+            <marker date="1505479828848" expanded="true" signature="1878:1908" ph="..." />
+            <marker date="1505479828848" expanded="true" signature="2035:2078" ph="SELECT * FRO... mahasiswa" />
+            <marker date="1505479828848" expanded="true" signature="2379:2967" ph="..." />
+            <marker date="1505479828848" expanded="true" signature="2760:2937" ph="..." />
+            <marker date="1505479828848" expanded="true" signature="2794:2932" ph="..." />
+            <marker date="1505479828848" expanded="true" signature="3403:3591" ph="SELECT * FRO... jadwal" />
+            <marker date="1505479828848" expanded="true" signature="3936:4316" ph="..." />
+            <marker date="1505479828848" expanded="true" signature="4429:4472" ph="SELECT * FRO... reg_matkul" />
+            <marker date="1505479828848" expanded="true" signature="4928:5005" ph="UPDATE reg_m... " />
+            <marker date="1505479828848" expanded="true" signature="5662:5743" ph="UPDATE reg_m... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dosen/doswal/reg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="60" column="51" lean-forward="false" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
+          <folding>
+            <marker date="1505479872785" expanded="true" signature="2539:2585" ph="..." />
+            <marker date="1505479872785" expanded="true" signature="2742:3516" ph="..." />
+            <marker date="1505479872785" expanded="true" signature="2791:3505" ph="..." />
+            <marker date="1505479872785" expanded="true" signature="2827:3492" ph="..." />
+            <marker date="1505479872785" expanded="true" signature="2864:3126" ph="..." />
+            <marker date="1505479872785" expanded="true" signature="3033:3109" ph="..." />
+            <marker date="1505479872785" expanded="true" signature="3161:3258" ph="..." />
+            <marker date="1505479872785" expanded="true" signature="3295:3477" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mahasiswa/registrasi/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+        <state relative-caret-position="357">
+          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/registrasi/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="30" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mahasiswa/jadwal/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+          <folding>
+            <marker date="1505480950226" expanded="true" signature="705:865" ph="..." />
+            <marker date="1505480950226" expanded="true" signature="782:844" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mahasiswa/function.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+        <state relative-caret-position="89">
+          <caret line="219" column="37" lean-forward="false" selection-start-line="219" selection-start-column="37" selection-end-line="219" selection-end-column="37" />
           <folding>
-            <marker date="1505470152102" expanded="true" signature="194:235" ph="SELECT * FRO... registrasi" />
-            <marker date="1505470152102" expanded="true" signature="539:771" ph="..." />
-            <marker date="1505470152102" expanded="true" signature="855:1112" ph="..." />
-            <marker date="1505470152102" expanded="true" signature="947:1082" ph="..." />
-            <marker date="1505470152102" expanded="true" signature="1170:1432" ph="..." />
-            <marker date="1505470152102" expanded="true" signature="1258:1402" ph="..." />
-            <marker date="1505470152102" expanded="true" signature="2210:2320" ph="INSERT INTO bukti_pembayaran... " />
-            <marker date="1505470152102" expanded="true" signature="2816:2924" ph="SELECT * FRO... jadwal" />
-            <marker date="1505470152102" expanded="true" signature="3001:3124" ph="SELECT id_ja... reg_matkul" />
-            <marker date="1505470152102" expanded="true" signature="3439:4142" ph="..." />
-            <marker date="1505470152102" expanded="true" signature="3794:4137" ph="..." />
-            <marker date="1505470152102" expanded="true" signature="4281:4324" ph="SELECT * FRO... reg_matkul" />
-            <marker date="1505470152102" expanded="true" signature="5037:5103" ph="SELECT * FRO... reg_matkul" />
-            <marker date="1505470152102" expanded="true" signature="5296:5351" ph="DELETE FROM " />
-            <marker date="1505470152102" expanded="true" signature="5481:5562" ph="INSERT INTO reg_matkul_detail... " />
-            <marker date="1505470152102" expanded="true" signature="5964:6030" ph="INSERT INTO reg_matkul... " />
-            <marker date="1505470152102" expanded="true" signature="6252:6344" ph="INSERT INTO reg_matkul_detail... " />
+            <marker date="1505481227937" expanded="true" signature="194:235" ph="SELECT * FRO... registrasi" />
+            <marker date="1505481227937" expanded="true" signature="539:771" ph="..." />
+            <marker date="1505481227937" expanded="true" signature="855:1112" ph="..." />
+            <marker date="1505481227937" expanded="true" signature="947:1082" ph="..." />
+            <marker date="1505481227937" expanded="true" signature="1170:1432" ph="..." />
+            <marker date="1505481227937" expanded="true" signature="1258:1402" ph="..." />
+            <marker date="1505481227937" expanded="true" signature="2210:2320" ph="INSERT INTO bukti_pembayaran... " />
+            <marker date="1505481227937" expanded="true" signature="2816:2924" ph="SELECT * FRO... jadwal" />
+            <marker date="1505481227937" expanded="true" signature="3001:3124" ph="SELECT id_ja... reg_matkul" />
+            <marker date="1505481227937" expanded="true" signature="3439:3765" ph="..." />
+            <marker date="1505481227937" expanded="true" signature="3439:3862" ph="..." />
+            <marker date="1505481227937" expanded="true" signature="3439:4266" ph="..." />
+            <marker date="1505481227937" expanded="true" signature="4229:4261" ph="..." />
+            <marker date="1505481227937" expanded="true" signature="4405:4448" ph="SELECT * FRO... reg_matkul" />
+            <marker date="1505481227937" expanded="true" signature="5061:5127" ph="SELECT * FRO... reg_matkul" />
+            <marker date="1505481227937" expanded="true" signature="5331:5386" ph="DELETE FROM " />
+            <marker date="1505481227937" expanded="true" signature="5516:5597" ph="INSERT INTO reg_matkul_detail... " />
+            <marker date="1505481227937" expanded="true" signature="5999:6065" ph="INSERT INTO reg_matkul... " />
+            <marker date="1505481227937" expanded="true" signature="6287:6379" ph="INSERT INTO reg_matkul_detail... " />
+            <marker date="1505481227937" expanded="true" signature="7157:7345" ph="SELECT * FRO... jadwal" />
+            <marker date="1505481227937" expanded="true" signature="7157:7365" ph="SELECT * FRO... jadwal" />
+            <marker date="1505481227937" expanded="true" signature="7157:7382" ph="SELECT * FRO... jadwal" />
+            <marker date="1505481227937" expanded="true" signature="7722:8070" ph="..." />
+            <marker date="1505481227937" expanded="true" signature="7722:8074" ph="..." />
+            <marker date="1505481227937" expanded="true" signature="8369:8573" ph="SELECT * FRO... jadwal" />
+            <marker date="1505481227937" expanded="true" signature="8875:9255" ph="..." />
+            <marker date="1505481227937" expanded="true" signature="9490:9544" ph="UPDATE reg_m... " />
+            <marker date="1505481227937" expanded="true" signature="9490:9569" ph="UPDATE reg_m... " />
           </folding>
         </state>
       </provider>

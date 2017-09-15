@@ -20,6 +20,13 @@
             Jadwal Perkuliahan</span>
         </a>
       </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" href="../doswal">
+                <i class="fa fa-fw fa-table"></i>
+                <span class="nav-link-text">
+            Dosen Wali</span>
+            </a>
+        </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
         <a class="nav-link" href="../nilai">
           <i class="fa fa-fw fa-sticky-note"></i>

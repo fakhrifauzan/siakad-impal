@@ -21,7 +21,7 @@ include "../function.php";
         <div class="card mb-3">
           <div class="card-header">
             <i class="fa fa-pencil-square-o"></i>
-            Registrasi Mata Kuliah
+            Jadwal Perkuliahan Sementara
           </div>
           <div class="card-body">
             <form method="post" action="../function.php">
@@ -35,33 +35,17 @@ include "../function.php";
                     <th>Jam</th>
                     <th>Ruangan</th>
                       <th>SKS</th>
-                      <th>Aksi</th>
-
                   </tr>
                 </thead>
                 <tbody>
                 <?php
-                    getDataRegistrasiSmtIni($connect);
+                    getJadwalSementara($connect);
                 ?>
                 </tbody>
               </table>
             </div>
           </div>
-            <div class="card-footer">
-                <?php
-                include_once '../../admin/function.php';
-
-                if (cekSiapAcc($connect) == 'simpan' AND getStatusRegistrasi($connect) == 'Aktif') {
-                    echo '<button type="submit" class="btn btn-dark col-md-6" name="simpan">Simpan</button>';
-                    echo '<button type="submit" class="btn btn-warning col-md-6" name="siapAcc">Siap ACC</button>';
-                } else if (cekSiapAcc($connect) == 'ok') {
-                    echo '<a href="../jadwal"><p class="btn btn-primary btn-block">Registrasi telah di ACC Dosen Wali</p></a>';
-                } else {
-                    echo '<p class="btn btn-danger btn-block">Menunggu Proses ACC Dosen Wali</p>';
-                }
-                ?>
-            </div>
-
+            </form>
         </div>
 
       </div>
