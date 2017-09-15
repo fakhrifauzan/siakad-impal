@@ -43,6 +43,7 @@
                 $mhs = mysqli_fetch_assoc($query);
                 $_SESSION['nim'] = $mhs['nim'];
                 $_SESSION['nama'] = $mhs['nama'];
+                $_SESSION['fakultas'] = $mhs['fakultas'];
                 echo"<script>window.location.href = 'mahasiswa';</script>";
             } else {
                 loginFailed();
