@@ -6,6 +6,24 @@
  * Time: 8:28
  */
 
+    function cek_pc() {
+        session_start();
+        if ($_SESSION) {
+            $level = $_SESSION['level'];
+            if ($level == "admin") {
+                header("Location: ../../admin");
+            } else if ($level == "dosen") {
+                header("Location: ../../dosen");
+            } else if ($level == "mahasiswa") {
+                header("Location: ../../mahasiswa");
+            } else {
+//                header("Location: ../../paycheck");
+            }
+        } else {
+            header("Location: ../../index.php");
+        }
+    }
+
     function getDataTagihan($connect) {
         $sql = "SELECT * FROM registrasi";
         $registrasi = mysqli_query($connect, $sql);

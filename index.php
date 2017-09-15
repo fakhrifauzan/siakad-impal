@@ -2,7 +2,7 @@
     require 'koneksi.php';
     include 'function.php';
 
-    cek_login();
+    cek_auth();
 ?>
 <!DOCTYPE html>
 <html lang="en">

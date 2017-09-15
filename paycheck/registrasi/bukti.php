@@ -6,7 +6,8 @@
  * Time: 7:58
  */
 
-    session_start();
+    include '../function.php';
+    cek_pc();
 
     if (isset($_GET['bukti']) && $_GET['bukti'] == 'ok') {
         $id_registrasi = $_GET['id'];

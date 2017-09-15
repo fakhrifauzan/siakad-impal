@@ -6,7 +6,9 @@
  * Time: 7:58
  */
 
-    session_start();
+    include "../function.php";
+
+    cek_mhs();
 
     if (isset($_GET['upload']) && $_GET['upload'] == 'bukti') {
         $id_registrasi = $_GET['id'];

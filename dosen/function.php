@@ -5,8 +5,26 @@
  * Date: 14/09/2017
  * Time: 22:53
  */
-    function getDataJadwalDosen($connect) {
+    function cek_dsn() {
         session_start();
+        if ($_SESSION) {
+            $level = $_SESSION['level'];
+            if ($level == "admin") {
+                    header("Location: ../../admin");
+            } else if ($level == "dosen") {
+//                header("Location: ../../dosen");
+            } else if ($level == "mahasiswa") {
+                header("Location: ../../mahasiswa");
+            } else {
+                header("Location: ../../paycheck");
+            }
+        } else {
+            header("Location: ../../index.php");
+        }
+    }
+
+    function getDataJadwalDosen($connect) {
+//        session_start();
         $kode_dosen = $_SESSION['kode_dosen'];
         $sql = "SELECT * FROM jadwal WHERE kode_dosen='$kode_dosen'";
         $jadwal = mysqli_query($connect, $sql);
@@ -30,8 +48,7 @@
     }
 
     function getDataKelasDoswal($connect) {
-        session_start();
-
+//        session_start();
         $kode_dosen = $_SESSION['kode_dosen'];
 
         $sql = "SELECT * FROM kelas WHERE doswal='$kode_dosen'";

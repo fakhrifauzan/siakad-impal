@@ -5,8 +5,8 @@
  * Date: 15/09/2017
  * Time: 7:58
  */
-
-    session_start();
+    include '../function.php';
+    cek_login();
 
     if (isset($_GET['bukti']) && $_GET['bukti'] == 'ok') {
         $id_registrasi = $_GET['id'];

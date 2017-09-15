@@ -6,6 +6,24 @@
  * Time: 7:21
  */
 
+    function cek_mhs() {
+        session_start();
+        if ($_SESSION) {
+            $level = $_SESSION['level'];
+            if ($level == "admin") {
+                header("Location: ../../admin");
+            } else if ($level == "dosen") {
+                    header("Location: ../../dosen");
+            } else if ($level == "mahasiswa") {
+//                header("Location: ../../mahasiswa");
+            } else {
+                header("Location: ../../paycheck");
+            }
+        } else {
+            header("Location: ../../index.php");
+        }
+    }
+
     function getDataTagihanMahasiswa($connect) {
         $nim = $_SESSION['nim'];
         $sql = "SELECT * FROM registrasi WHERE nim='$nim'";

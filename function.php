@@ -6,7 +6,7 @@
  * Time: 21:38
  */
 
-    function cek_login() {
+    function cek_auth() {
         session_start();
         if ($_SESSION) {
             $level = $_SESSION['level'];
