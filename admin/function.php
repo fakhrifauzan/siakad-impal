@@ -194,16 +194,34 @@
                         <td>".$value['nim']."</td>
                         <td>".$value['semester']."</td>
                         <td>".$value['tagihan']."</td>
-                        <td>".$value['status']."</td>
-                        <td>
+                        <td>".$value['status']."</td>";
+                if ($value['status'] == 'Lunas') {
+                    echo "<td>
+                            <a href='bukti.php?bukti=ok&id=$value[id_registrasi]'>
+                                <button type='button' class='btn btn-primary'>Lihat Bukti Pembayaran</button>
+                            </a>
+                            <a href='../function.php?print=bukti&id=$value[id_registrasi]'>
+                                <button type='button' class='btn btn-default'>Cetak Kwitansi</button>
+                            </a>
+                        </td>";
+                } else {
+                    echo "<td>
+                            <a href='bukti.php?bukti=ok&id=$value[id_registrasi]'>
+                                <button type='button' class='btn btn-primary'>Lihat Bukti Pembayaran</button>
+                            </a>
                             <a href='../function.php?del=tagihan&id=$value[id_registrasi]'>
                                 <button type='button' class='btn btn-danger'>Delete</button>
                             </a>
-                        </td>
-                    </tr>
-                    ";
+                        </td>";
+
+                }
+                echo "</tr>";
             }
         }
+    }
+
+    if (isset($_GET["print"]) && $_GET['print'] == 'bukti') {
+        echo"<script>alert('Fitur belum Tersedia!');window.location.href = 'registrasi/tagihan.php';</script>";
     }
 
 
@@ -223,7 +241,6 @@
     if (isset($_POST["addTagihan"])) {
         include_once '../koneksi.php';
         addTagihan($connect);
-        echo"<script>alert('Tagihan telah ditambah!');window.location.href = 'registrasi/tagihan.php';</script>";
     }
 
     function addTagihan($connect) {
@@ -232,8 +249,24 @@
         $tagihan = $_POST['tagihan'];
         $status = $_POST['status'];
 
-        $sql = "INSERT INTO registrasi VALUES (NULL, '$nim', '$semester', '$tagihan', '$status')";
-        mysqli_query($connect,$sql);
+        if (cekTagihanAvailable($connect, $nim, $semester)){
+            $sql = "INSERT INTO registrasi VALUES (NULL, '$nim', '$semester', '$tagihan', '$status')";
+            mysqli_query($connect,$sql);
+            echo"<script>alert('Tagihan telah ditambah!');window.location.href = 'registrasi/tagihan.php';</script>";
+        } else {
+            echo"<script>alert('Tagihan GAGAL ditambah!');window.location.href = 'registrasi/tagihan.php';</script>";
+        }
+    }
+
+
+
+    function cekTagihanAvailable($connect, $nim, $semester) {
+        $cek = "SELECT * FROM registrasi WHERE nim = '$nim' AND semester='$semester'";
+        $status = mysqli_query($connect, $cek);
+        if (mysqli_num_rows($status) >= 1) {
+            return false;
+        }
+        return true;
     }
 
     function getDataJadwal($connect) {
@@ -280,41 +313,35 @@
         $ruangan = $_POST['ruangan'];
         $semester = $_POST['semester'];
 
-        $sql = "INSERT INTO jadwal VALUES (NULL, '$kode_dosen', '$kode_matkul', '$kode_kelas', '$hari', '$jam', '$ruangan', '$semester')";
-        mysqli_query($connect,$sql);
-        echo"<script>alert('Jadwal telah ditambah!');window.location.href = 'jadwal';</script>";
-
-//        if (cekRuanganAvailable($connect, $ruangan, $hari, $jam, $semester)){
-//            if (cekDosenAvailable($connect, $kode_dosen, $hari, $jam, $semester)) {
-//                $sql = "INSERT INTO jadwal VALUES (NULL, '$kode_dosen', '$kode_matkul', '$kode_kelas', '$hari', '$jam', '$ruangan', '$semester')";
-//                mysqli_query($connect,$sql);
-//                echo"<script>alert('Jadwal telah ditambah!');window.location.href = 'jadwal';</script>";
-//            } else {
-//                echo"<script>alert('Dosen tidak tersedia!');window.location.href = 'jadwal';</script>";
-//            }
-//        } else {
-//            echo"<script>alert('Ruangan tidak tersedia!');window.location.href = 'jadwal';</script>";
-//        }
-
-
+        if (cekRuanganAvailable($connect, $ruangan, $hari, $jam, $semester)){
+            if (cekDosenAvailable($connect, $kode_dosen, $hari, $jam, $semester)) {
+                $sql = "INSERT INTO jadwal VALUES (NULL, '$kode_dosen', '$kode_matkul', '$kode_kelas', '$hari', '$jam', '$ruangan', '$semester')";
+                mysqli_query($connect,$sql);
+                echo"<script>alert('Jadwal telah ditambah!');window.location.href = 'jadwal';</script>";
+            } else {
+                echo"<script>alert('Dosen tidak tersedia!');window.location.href = 'jadwal';</script>";
+            }
+        } else {
+            echo"<script>alert('Ruangan tidak tersedia!');window.location.href = 'jadwal';</script>";
+        }
     }
 
     function cekDosenAvailable($connect, $kode_dosen, $hari, $jam, $semester) {
         $cek = "SELECT * FROM jadwal WHERE kode_dosen = '$kode_dosen' AND hari='$hari' AND jam ='$jam' AND semester = '$semester'";
         $status = mysqli_query($connect, $cek);
         if (mysqli_num_rows($status) >= 1) {
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 
     function cekRuanganAvailable($connect, $ruangan, $hari, $jam, $semester) {
         $cek = "SELECT * FROM jadwal WHERE ruangan = '$ruangan' AND hari='$hari' AND jam ='$jam' AND semester = '$semester'";
         $status = mysqli_query($connect, $cek);
         if (mysqli_num_rows($status) >= 1) {
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 
     if (isset($_GET["del"]) && $_GET["del"] == "jadwal"){
