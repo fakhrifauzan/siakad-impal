@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2017 at 04:21 PM
+-- Generation Time: Sep 17, 2017 at 05:03 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -80,7 +80,7 @@ CREATE TABLE `config` (
 --
 
 INSERT INTO `config` (`config`, `value`) VALUES
-('status_reg', 'Aktif'),
+('status_reg', 'Tidak Aktif'),
 ('tahun_ajar', '1516/2');
 
 -- --------------------------------------------------------
@@ -212,6 +212,29 @@ INSERT INTO `matkul` (`kode_matkul`, `nama_matkul`, `sks`, `fakultas`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `nilai`
+--
+
+CREATE TABLE `nilai` (
+  `id` int(11) NOT NULL,
+  `id_jadwal` int(11) NOT NULL,
+  `nim` varchar(20) NOT NULL,
+  `kuis` int(11) NOT NULL,
+  `uts` int(11) NOT NULL,
+  `uas` int(11) NOT NULL,
+  `indeks` varchar(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `nilai`
+--
+
+INSERT INTO `nilai` (`id`, `id_jadwal`, `nim`, `kuis`, `uts`, `uas`, `indeks`) VALUES
+(8, 2, '111', 0, 50, 80, 'D');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `paycheck`
 --
 
@@ -290,8 +313,8 @@ CREATE TABLE `reg_matkul_detail` (
 --
 
 INSERT INTO `reg_matkul_detail` (`id`, `id_reg_matkul`, `id_jadwal`) VALUES
-(38, 4, 5),
-(39, 4, 3);
+(40, 4, 5),
+(41, 4, 2);
 
 --
 -- Indexes for dumped tables
@@ -349,6 +372,12 @@ ALTER TABLE `matkul`
   ADD PRIMARY KEY (`kode_matkul`);
 
 --
+-- Indexes for table `nilai`
+--
+ALTER TABLE `nilai`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `paycheck`
 --
 ALTER TABLE `paycheck`
@@ -393,6 +422,11 @@ ALTER TABLE `bukti_pembayaran`
 ALTER TABLE `jadwal`
   MODIFY `id_jadwal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
+-- AUTO_INCREMENT for table `nilai`
+--
+ALTER TABLE `nilai`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
 -- AUTO_INCREMENT for table `paycheck`
 --
 ALTER TABLE `paycheck`
@@ -401,7 +435,7 @@ ALTER TABLE `paycheck`
 -- AUTO_INCREMENT for table `registrasi`
 --
 ALTER TABLE `registrasi`
-  MODIFY `id_registrasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_registrasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `reg_matkul`
 --
@@ -411,7 +445,7 @@ ALTER TABLE `reg_matkul`
 -- AUTO_INCREMENT for table `reg_matkul_detail`
 --
 ALTER TABLE `reg_matkul_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -35,11 +35,12 @@ cek_dsn();
                             <th>Jam</th>
                             <th>Ruangan</th>
                             <th>Semester</th>
+                            <th>Detail</th>
                         </tr>
                         </thead>
                         <tbody>
                         <?php
-                        getDataJadwalDosen($connect);
+                            getDataJadwalDosenSmtIni($connect);
                         ?>
                         </tbody>
                     </table>

@@ -140,6 +140,7 @@
 
     if (isset($_POST["siapAcc"])) {
         include_once '../koneksi.php';
+        simpanKrs($connect);
         setSiapAcc($connect);
     }
 
@@ -223,7 +224,6 @@
 
     function getJadwalMhs($connect) {
         include_once "../../admin/function.php";
-
         $nim = $_SESSION['nim'];
 
         $status_reg = getStatusRegistrasi($connect);
@@ -262,6 +262,39 @@
             echo '<script>alert("Siap ACC!");window.location.href=\'registrasi\';</script>';
         } else {
             echo '<script>alert("Data Gagal disimpan");window.location.href=\'registrasi\';</script>';
+        }
+    }
+
+    function getDataNilai($connect) {
+        $nim = $_SESSION['nim'];
+        $sql = "SELECT kode_matkul, nama_matkul, sks, jadwal.semester semester, kuis, uts, uas, indeks FROM mahasiswa
+                  JOIN reg_matkul USING (nim)
+                  JOIN reg_matkul_detail USING (id_reg_matkul)
+                  JOIN jadwal USING (id_jadwal)
+                  JOIN matkul USING (kode_matkul)
+                  JOIN nilai USING (nim)
+                WHERE status='ok' AND nim = '$nim' AND reg_matkul_detail.id_jadwal IN (
+                  SELECT nilai.id_jadwal
+                  FROM nilai
+                )";
+        $nilai = mysqli_query($connect, $sql);
+        if(mysqli_num_rows($nilai) == 0){
+            //echo '<tr><td colspan="4"><center>Data Tidak Tersedia</center></td></tr>';
+        } else {
+            foreach ($nilai as $value) {
+                echo "
+                        <tr>
+                            <td>".$value['kode_matkul']."</td>
+                            <td>".$value['nama_matkul']."</td>
+                            <td>".$value['sks']."</td>
+                            <td>".$value['semester']."</td>
+                            <td>".$value['kuis']."</td>
+                            <td>".$value['uts']."</td>
+                            <td>".$value['uas']."</td>
+                            <td>".$value['indeks']."</td>
+                        </tr>
+                        ";
+            }
         }
     }
 

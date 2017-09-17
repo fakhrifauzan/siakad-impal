@@ -1,11 +1,12 @@
 <?php
-require "../../koneksi.php";
-include "../function.php";
-cek_dsn();
+    require "../../koneksi.php";
+    include "../function.php";
 
-if (isset($_GET['nim'])) {
-    $nim = $_GET['nim'];
-}
+    cek_dsn();
+
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,26 +25,27 @@ if (isset($_GET['nim'])) {
         <!-- Example Tables Card -->
         <div class="card mb-3">
           <div class="card-header">
-            <i class="fa fa-pencil-square-o"></i>
-            Jadwal Perkuliahan <?php echo $nim?>
+            <i class="fa fa-table"></i>
+            Data Nilai
           </div>
           <div class="card-body">
-            <form method="post" action="../function.php">
+              <form method="post" action="../function.php">
             <div class="table-responsive">
               <table class="table table-bordered" width="100%" id="dataTable" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>Matakuliah</th>
+                    <th>NIM</th>
+                    <th>Nama</th>
                     <th>Kelas</th>
-                    <th>Hari</th>
-                    <th>Jam</th>
-                    <th>Ruangan</th>
-                      <th>SKS</th>
+                    <th>Kuis</th>
+                    <th>UTS</th>
+                    <th>UAS</th>
+                    <th>Indeks</th>
                   </tr>
                 </thead>
                 <tbody>
                 <?php
-                    getJadwalSementaraMhs($connect,$nim);
+                    getDataNilaiMahasiswaKelas($connect,$id);
                 ?>
                 </tbody>
               </table>
@@ -53,21 +55,16 @@ if (isset($_GET['nim'])) {
                 <?php
                 include_once '../../admin/function.php';
 
-                if (cekSiapAccMhs($connect,$nim) == 'siap' AND getStatusRegistrasi($connect) == 'Aktif') {
-                    echo '<input type="number" name="nim" value='.$nim.' hidden>';
-                    echo '<button type="submit" class="btn btn-danger col-md-6" name="batal">Batalkan</button>';
-                    echo '<button type="submit" class="btn btn-primary col-md-6" name="okeAcc">ACC Registrasi</button>';
-                } else if (cekSiapAccMhs($connect,$nim) == 'simpan' AND getStatusRegistrasi($connect) == 'Aktif') {
-                    echo '<p class="btn btn-warning btn-block">Mahasiswa Belum Siap ACC</p>';
-                } else if (cekSiapAccMhs($connect,$nim) == 'ok' AND getStatusRegistrasi($connect) == 'Tidak Aktif') {
-                    echo '<p class="btn btn-info btn-block">Sudah Anda ACC</p>';
+                if (getStatusRegistrasi($connect) == 'Tidak Aktif') {
+                    echo '<input type="hidden" name="id_jadwal" value="'.$id.'">';
+                    echo '<button type="submit" class="btn btn-dark btn-block" name="simpanNilai">Simpan</button>';
                 } else {
-                    echo '<p class="btn btn-info btn-block">Masa Registrasi Tidak Aktif</p>';
+                    echo '<p class="btn btn-danger btn-block">Sedang berlangsung proses Registrasi</p>';
                 }
                 ?>
             </div>
-            </form>
         </div>
+          </form>
 
       </div>
       <!-- /.container-fluid -->

@@ -304,9 +304,6 @@
                         <td>".$value['ruangan']."</td>
                         <td>".$value['semester']."</td>
                         <td>
-                            <a href='../function.php?edit=jadwal&id=$value[id_jadwal]'>
-                                <button type='button' class='btn btn-warning'>Edit</button>
-                            </a>
                             <a href='../function.php?del=jadwal&id=$value[id_jadwal]'>
                                 <button type='button' class='btn btn-danger'>Delete</button>
                             </a>
